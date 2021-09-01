@@ -8,11 +8,20 @@ public class Main {
 
 
         // Ankur sends a message to Abhinaya
-		Message message1 = new Message("SENDER_Ankur","RECEIVER_Abhinaya","Hello, Have you checked out https://blog.crio.do?");
-        MessageController.send(message1);
+		// Ankur sends a text message to Abhinaya
+		Message message1 = new Message();
+        message1.setSenderId("SENDER_Ankur");
+        message1.setReceiverId("RECEIVER_Abhinaya");
+        message1.setMessageContent("Hello, Have you checked out https://blog.crio.do?");
+        AndroidHandler.send(message1);
+
 
         // Aman sends a message to Abhiskek
-        Message message2 = new Message("SENDER_Aman","RECEIVER_Abhiskek","Hello, Hello, Enjoying Learn By Doing");
-        MessageController.send(message2);
+        Message message2 = new Message();
+        message2.setSenderId("SENDER_Aman");
+        message2.setReceiverId("RECEIVER_Abhiskek");
+        message2.setMessageContent("Hello, Hello, Enjoying Learn By Doing!");
+
+        AndroidHandler.send(message2);
 	}
 }

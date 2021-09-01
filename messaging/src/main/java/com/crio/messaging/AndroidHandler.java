@@ -1,7 +1,6 @@
 package com.crio.messaging;
 
-
-public class MessageController {
+public class AndroidHandler{
 
     public static void send(Message message) {
         // 1. Discard empty strings.
@@ -46,3 +45,4 @@ public class MessageController {
     }
     
 }
+
