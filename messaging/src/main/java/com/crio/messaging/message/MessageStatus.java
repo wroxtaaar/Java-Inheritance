@@ -1,4 +1,4 @@
-package com.crio.messaging;
+package com.crio.messaging.message;
 
 public enum MessageStatus {
     SENT,

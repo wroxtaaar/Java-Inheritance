@@ -1,11 +1,11 @@
-package com.crio.messaging;
+package com.crio.messaging.message;
 
 // Message class contains all message related variables/functions.
 public class Message {
     private String messageId;
     private String senderId;
     private String receiverId;
-    private String messageContent;
+    private MessageType messageType;
 
     // Some Common fields, can be extended to many more.
     private MessageStatus messageStatus;
@@ -30,14 +30,6 @@ public class Message {
         this.receiverId = receiverId;
     }
 
-    public String getMessageContent() {
-        return messageContent;
-    }
-
-    public void setMessageContent(String messageContent) {
-        this.messageContent = messageContent;
-    }
-
     public MessageStatus getMessageStatus() {
         return messageStatus;
     }
@@ -46,17 +38,27 @@ public class Message {
         this.messageStatus = messageStatus;
     }
 
-    public int getMessageContentSize(){
-        return messageContent.length();
+    public MessageType getMessageType() {
+        return messageType;
     }
 
+    protected void setMessageType(MessageType messageType) {
+        this.messageType = messageType;
+    }
+
+    public String getMessageId() {
+        return messageId;
+    }
+
+    protected void setMessageId(String messageId) {
+        this.messageId = messageId;
+    }
 
     @Override
     public String toString() {
-        return "Message [messageContent=" + messageContent + ", messageId=" + messageId + ", messageStatus="
+        return "Message [messageId=" + messageId + ", messageStatus="
                 + messageStatus + ", receiverId=" + receiverId + ", senderId=" + senderId + "]";
     }
-
 
 
 }
